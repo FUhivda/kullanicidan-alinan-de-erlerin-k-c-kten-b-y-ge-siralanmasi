@@ -1,23 +1,36 @@
-# Compiled class file
-*.class
+ import java.util.Scanner;
+public class sayilariKucuktenBuyugeSiralama {
+    public static void main(String[] args){
+        int a,b,c;
 
-# Log file
-*.log
+        Scanner i = new Scanner(System.in);
+        System.out.print(" a sayısını giriniz: ");
+        a= i.nextInt();
+        System.out.print(" b sayısını giriniz: ");
+        b= i.nextInt();
+        System.out.print(" c sayısını giriniz: ");
+        c= i.nextInt();
 
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+        if (  ( a<b ) && ( a<c) ) {
+            if ( (b<c)) {
+                System.out.println(" a<b<c");
+            } else {
+                System.out.println(" a<c<b");
+            }
+        } else if (  ( b<a ) && ( b<c ) ) {
+            if ((a<c)) {
+                System.out.println(" b<a<c");
+            } else {
+                System.out.println(" b<c<a");
+            }
+        } else if (  ( c<a ) && (c<b) ) {
+            if ((a<b)) {
+                System.out.println(" c<a<b");
+            } else {
+                System.out.println(" c<b<a");
+            }
+        } else if ( ( a == b ) && ( b == c)) {
+            System.out.println(" a=b=c");
+        }
+    }
+}
